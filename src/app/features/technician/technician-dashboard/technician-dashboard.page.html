@@ -1,0 +1,46 @@
+<ion-content class="tech-dash-content">
+
+  <div class="dash-scene">
+
+    <div class="dash-header">
+      <div class="header-left">
+        <span class="eyebrow">FIELD OPS</span>
+        <h1>{{ technicianName || 'Technician' }}</h1>
+      </div>
+      <div class="id-chip">
+        <span class="chip-label">ID</span>
+        <span class="chip-value">{{ technicianId || '—' }}</span>
+      </div>
+    </div>
+
+    <div class="status-strip">
+      <span class="status-dot"></span>
+      <span>On Shift</span>
+    </div>
+
+    <div class="ticket-list">
+
+      <div class="ticket-card" routerLink="/assigned-jobs">
+        <div class="ticket-accent"></div>
+        <div class="ticket-icon">
+          <ion-icon name="clipboard-outline"></ion-icon>
+        </div>
+        <div class="ticket-body">
+          <h3>Assigned Jobs</h3>
+          <p>View and update your work orders</p>
+        </div>
+        <ion-icon class="ticket-arrow" name="chevron-forward-outline"></ion-icon>
+      </div>
+
+    </div>
+
+    <div class="end-shift">
+      <ion-button expand="block" class="logout-btn" (click)="logout()">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        End Shift &amp; Logout
+      </ion-button>
+    </div>
+
+  </div>
+
+</ion-content>

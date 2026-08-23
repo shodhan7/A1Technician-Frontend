@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="login-container">
+
+    <div class="logo-section">
+      <div class="logo-icon">
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+      </div>
+      <h1>Welcome Back!</h1>
+      <p>Access Your Bookings</p>
+    </div>
+
+    <div class="form-card">
+      <h2 class="card-title">Customer Login</h2>
+      <p class="card-subtitle">Enter your registered phone number</p>
+
+      <ion-item lines="none">
+        <ion-input
+          type="tel"
+          label="Phone Number"
+          labelPlacement="floating"
+          [(ngModel)]="phone"
+          placeholder="e.g. 9876543210">
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="login()">
+        LOGIN
+      </ion-button>
+
+      <div class="divider">
+        <span>New to our app?</span>
+      </div>
+
+      <p class="register-link">
+        Don't have an account?
+        <a routerLink="/customer-register">Register Now</a>
+      </p>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-content>
+
+  <div class="login-container">
+
+    <div class="logo-section">
+      <h1>Admin Login</h1>
+      <p>Access Admin Dashboard</p>
+    </div>
+
+    <div class="form-card">
+
+      <!-- EMAIL -->
+      <ion-item>
+        <ion-input
+          type="email"
+          label="Admin Email"
+          labelPlacement="floating"
+          placeholder="admin@matrimony.com"
+          [(ngModel)]="email">
+        </ion-input>
+      </ion-item>
+
+      <!-- PASSWORD WITH EYE ICON -->
+      <ion-item>
+
+        <ion-input
+          [type]="showPassword ? 'text' : 'password'"
+          label="Password"
+          labelPlacement="floating"
+          placeholder="Enter Password"
+          [(ngModel)]="password">
+        </ion-input>
+
+        <ion-button
+          fill="clear"
+          slot="end"
+          (click)="togglePassword()">
+
+          <ion-icon
+            [name]="showPassword ? 'eye-off-outline' : 'eye-outline'">
+          </ion-icon>
+
+        </ion-button>
+
+      </ion-item>
+
+      <!-- LOGIN BUTTON -->
+      <ion-button
+        expand="block"
+        (click)="login()">
+
+        Login
+      </ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

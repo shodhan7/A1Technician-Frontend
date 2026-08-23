@@ -1,0 +1,64 @@
+<ion-content class="tech-login-content">
+
+  <div class="scene">
+    <div class="grid-overlay"></div>
+
+    <div class="login-container">
+
+      <div class="badge-card">
+
+        <div class="badge-strip">
+          <span class="strip-label">TECHNICIAN ACCESS</span>
+          <span class="strip-dot"></span>
+        </div>
+
+        <div class="badge-head">
+          <div class="badge-icon">
+            <ion-icon name="construct-outline"></ion-icon>
+          </div>
+          <h1>Field Login</h1>
+          <p>Sign in to view your assigned jobs</p>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Email</label>
+          <ion-input
+            class="field-input"
+            type="email"
+            placeholder="you@company.com"
+            [(ngModel)]="email">
+          </ion-input>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Password</label>
+          <div class="password-row">
+            <ion-input
+              class="field-input"
+              [type]="showPassword ? 'text' : 'password'"
+              placeholder="••••••••"
+              [(ngModel)]="password">
+            </ion-input>
+            <ion-icon
+              class="toggle-icon"
+              [name]="showPassword ? 'eye-outline' : 'eye-off-outline'"
+              (click)="togglePassword()">
+            </ion-icon>
+          </div>
+        </div>
+
+        <ion-button expand="block" class="login-btn" (click)="login()">
+          <span>Log In</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+
+        <div class="badge-footer">
+          <span class="corner-tag">ID · FIELD-OPS</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>

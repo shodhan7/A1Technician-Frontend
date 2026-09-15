@@ -19,7 +19,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "www",
+              "base": "D:/A1-Back-End-4/A1-Back-End-4/A1-Back End/wwwroot",
               "browser": ""
             },
             "index": "src/index.html",
@@ -49,8 +49,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "16kb",
+                  "maximumError": "20kb"
                 }
               ],
               "fileReplacements": [
